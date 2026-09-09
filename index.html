@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Senhas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="top-bar">
+        <h1>Minhas Senhas</h1>
+    </header>
+    
+    <main class="container">
+        <!-- Lista onde os cartões de senhas vão aparecer -->
+        <div id="password-list"></div>
+    </main>
+
+    <!-- Botão Flutuante (+) -->
+    <button id="btn-add" class="fab">+</button>
+
+    <!-- Formulário Modal (Oculto por padrão) -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-card">
+            <h2>Novo Login</h2>
+            <div class="input-group">
+                <input type="text" id="input-service" placeholder="Serviço (ex: GitHub)" autocomplete="off">
+                <input type="text" id="input-user" placeholder="E-mail ou Usuário" autocomplete="off">
+                <input type="password" id="input-pass" placeholder="Senha">
+            </div>
+            <div class="modal-actions">
+                <button id="btn-cancel" class="btn-text">Cancelar</button>
+                <button id="btn-save" class="btn-primary">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- O HTML chama o .js gerado pelo TypeScript -->
+    <script src="app.js"></script>
+</body>
+</html>
